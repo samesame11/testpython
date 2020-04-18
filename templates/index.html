@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav id="nav" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://www.seekpng.com/png/detail/197-1972514_cinnamonroll-png-.png" width="50" height="30"
+                class="d-inline-block align-top" alt="logo">
+            SCGTEST
+        </a>
+    </nav>
+    <p>
+        <div id="btn_answer">
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                aria-expanded="false" aria-controls="multiCollapseExample1">Find B and C</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+                aria-expanded="false" aria-controls="multiCollapseExample2">Find X Y and Z</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3"
+                aria-expanded="false" aria-controls="multiCollapseExample3">MAP</button>
+        </div>
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <p>Task 1:  If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value</p>
+                    <p>answer: {{answer1}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    <p>Task 2:  X, Y, 5, 9, 15, 23, Z  - Please create a new function for finding X, Y, Z value </p>
+                    <p>answer: {{answer2}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    <p>From: SCG Bangsue</p>
+                    <p>To: Central world</p>
+                    <p>distance: {{distance}}</p>
+                    <p>duration: {{duration}}</p>
+                    <p>go by: {{goby}}</p>
+                    <!-- <form action="addForm" method="GET">
+                        <div class="form-group">
+                          <label for="from">From: </label>
+                          <input type="text" class="form-control" id="from" placeholder="from">
+                        </div>
+                        <div class="form-group">
+                          <label for="to">To: </label>
+                          <input type="text" class="form-control" id="to" placeholder="to">
+                        </div>
+                        <button type="button" id="mapButton" class="btn btn-primary">Submit</button>
+                      </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/js/index.js"></script>
+
+</html>
